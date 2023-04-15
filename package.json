@@ -1,0 +1,19 @@
+{
+  "name": "mock-restaurant",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mauiman77/mock-restaurant.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mauiman77/mock-restaurant/issues"
+  },
+  "homepage": "https://github.com/mauiman77/mock-restaurant#readme"
+}
