@@ -1,1 +1,1 @@
-console.log("Hi");
+document.getElementById("content").appendChild(function(){const e=document.createElement("div");return e.className="header",e.textContent="Test!",e}());

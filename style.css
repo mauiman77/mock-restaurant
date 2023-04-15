@@ -3,7 +3,7 @@ html, body, .content {
     margin: 0;
 }
 
-.content {
+#content {
     display: grid;
     grid-template-rows: 3.4rem 1fr 2rem;
 }
