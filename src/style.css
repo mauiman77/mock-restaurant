@@ -4,8 +4,9 @@ html, body, .content {
 }
 
 #content {
+    height: 100%;
     display: grid;
-    grid-template-rows: 3.4rem 1fr 2rem;
+    grid-template-rows: 10rem 50rem 2rem;
 }
 
 .header {
@@ -17,6 +18,10 @@ html, body, .content {
     justify-content: center;
     align-items: center;
     gap: 5rem;
+
+    display: grid;
+    grid-template-rows: 3fr 1fr;
+    grid-template-columns: 1fr;
 }
 
 .header .placeholder {
@@ -32,9 +37,6 @@ html, body, .content {
 .main {
     grid-row: 2/3;
     background-color: bisque;
-    background-image: url('background.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .footer {
