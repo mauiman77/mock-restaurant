@@ -2,13 +2,32 @@ import './style.css';
 
 const mainSection = document.getElementById('content');
 const subSections = {
-  home: 'active',
+  home: 'hidden',
   menu: 'hidden',
-  contact: 'hidden'
+  contact: 'active'
 }
 
 function generateContent() {
-  return 0;
+  const homeContent = document.createElement('div');
+  if (subSections.home === 'active') {
+    homeContent.classList.add('home-content');
+  
+    return homeContent;
+  }
+  else if (subSections.menu === 'active') {
+    homeContent.classList.add('menu-content');
+
+    return homeContent;
+  }
+  else if (subSections.contact === 'active') {
+    homeContent.classList.add('contact-content');
+
+    return homeContent;
+  }
+  else {
+    console.log('error')
+    return homeContent.classList.add('home-content');
+  }
 }
 
 function headerSection () {
@@ -46,16 +65,9 @@ function headerSectionButtons () {
 function bodySection () {
   const bodyContent = document.createElement('div');
   bodyContent.classList.add('main');
-  bodyContent.appendChild(addHomeContent());
+  bodyContent.appendChild(generateContent());
 
   return bodyContent;
-}
-
-function addHomeContent () {
-  const homeContent = document.createElement('div');
-  homeContent.classList.add('home-content');
-
-  return homeContent;
 }
 
 function footerSection () {
