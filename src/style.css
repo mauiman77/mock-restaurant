@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap&family=Pacifico&display=swap');
+
+:root {
+    --main-section-color: rgb(247, 247, 247);
+    --title-font: 'Pacifico', cursive;
+}
+
 html, body, .content {
     height: 100%;
     margin: 0;
@@ -11,21 +18,40 @@ html, body, .content {
 
 .header {
     grid-row: 1/2;
-    background-color: rgb(235, 235, 235);
-    box-shadow: 0px 0px 50px 10px black;
+    background-color: var(--main-section-color);
     z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 10px;
 
     display: grid;
-    grid-template-rows: 3fr 1fr;
+    grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr;
 }
 
+.header .title {
+    font-size: 4.4rem;
+    font-family: var(--title-font);
+    display: flex;
+    justify-content: center;
+    margin-top: -1rem;
+}
+
+.header .buttons {
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons .btn {
+    width: 7rem;
+    height: 100%;
+    background-color: orange;
+}
+
 .header .placeholder {
-    background-color: rgb(199, 199, 199);
+    background-color: var(--main-section-color);
     padding: 0.5rem;
     border-radius: 400rem;
 }
@@ -36,13 +62,13 @@ html, body, .content {
 
 .main {
     grid-row: 2/3;
-    background-color: bisque;
+    background-color: var(--main-section-color);
+    font-family: var(--title-font);
 }
 
 .footer {
     grid-row: 3/4;
     background-color: rgb(235, 235, 235);
-    box-shadow: 0px 0px 50px 10px black;
     display: flex;
     justify-content: flex-start;
     align-items: center;
