@@ -1,33 +1,52 @@
 import './style.css';
 
 const mainSection = document.getElementById('content');
+
 const subSections = {
   home: 'hidden',
-  menu: 'hidden',
-  contact: 'active'
+  menu: 'active',
+  contact: 'hidden'
 }
 
-function generateContent() {
+function clearContent () {
+  const toClear = document.querySelector('.main')
+  toClear.innerHTML = ''
   const homeContent = document.createElement('div');
+  homeContent.className = generateContent();
+  toClear.appendChild(homeContent)
+}
+
+function generateContent () {
+  console.log(subSections)
+  let homeContent = ''
+  if (!homeContent || homeContent.textContent === '') {
+    homeContent = document.createElement('div');
+  }
   if (subSections.home === 'active') {
-    homeContent.classList.add('home-content');
-  
-    return homeContent;
+    return 'home-content';
   }
   else if (subSections.menu === 'active') {
-    homeContent.classList.add('menu-content');
-
-    return homeContent;
+    return 'menu-content';
   }
   else if (subSections.contact === 'active') {
-    homeContent.classList.add('contact-content');
-
-    return homeContent;
+    return 'contact-content';
   }
   else {
-    console.log('error')
-    return homeContent.classList.add('home-content');
   }
+
+  return homeContent;
+}
+
+function getObjectKey(obj, value) {
+  return Object.keys(obj).find((key) => obj[key] === value);
+}
+
+function switchContent (id) {
+  const toChange = getObjectKey(subSections, 'active')
+  subSections[toChange] = 'hidden'
+  subSections[id] = 'active'
+  clearContent()
+  generateContent()
 }
 
 function headerSection () {
@@ -51,9 +70,12 @@ function headerSectionButtons () {
   const headerButtons = document.createElement('div');
   headerButtons.classList.add('buttons');
   const btnTexts = ['Home', 'Menu', 'Contact'];
+  const btnIds = ['home', 'menu', 'contact']
   for (let i = 0; i < 3; i++) {
     const btn = document.createElement('button');
     btn.classList.add('btn');
+    btn.setAttribute('id', btnIds[i]);
+    btn.addEventListener('click', (e) => switchContent(e.target.id))
     const textToAdd = btnTexts[i];
     btn.textContent = textToAdd;
     headerButtons.appendChild(btn)
@@ -65,7 +87,6 @@ function headerSectionButtons () {
 function bodySection () {
   const bodyContent = document.createElement('div');
   bodyContent.classList.add('main');
-  bodyContent.appendChild(generateContent());
 
   return bodyContent;
 }
