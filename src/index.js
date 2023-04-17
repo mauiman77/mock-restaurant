@@ -2,6 +2,7 @@ import './style.css';
 
 const mainSection = document.getElementById('content');
 
+
 const subSections = {
   home: 'active',
   menu: 'hidden',
