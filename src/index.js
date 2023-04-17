@@ -1,4 +1,5 @@
 import './style.css';
+import { title } from './homeContent';
 
 const mainSection = document.getElementById('content');
 
@@ -9,15 +10,19 @@ const subSections = {
   contact: 'hidden'
 }
 
-function clearContent () {
+function changeContent () {
   const toClear = document.querySelector('.main')
   toClear.innerHTML = ''
   const homeContent = document.createElement('div');
-  homeContent.className = generateContent();
+  homeContent.className = contentIdentifier();
   toClear.appendChild(homeContent)
 }
 
 function generateContent () {
+
+}
+
+function contentIdentifier () {
   if (subSections.home === 'active') {
     return 'home-content';
   }
@@ -40,8 +45,8 @@ function switchContent (id) {
   const toChange = getObjectKey(subSections, 'active')
   subSections[toChange] = 'hidden'
   subSections[id] = 'active'
-  clearContent()
-  generateContent()
+  changeContent()
+  contentIdentifier()
 }
 
 function headerSection () {

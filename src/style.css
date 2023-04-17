@@ -109,8 +109,8 @@ html, body, .content {
 }
 
 .home-content {
-    height: 85%;
-    width: 95%;
+    height: 45rem;
+    width: 30rem;
     background-color: aqua;
 }
 
