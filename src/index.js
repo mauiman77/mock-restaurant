@@ -3,8 +3,8 @@ import './style.css';
 const mainSection = document.getElementById('content');
 
 const subSections = {
-  home: 'hidden',
-  menu: 'active',
+  home: 'active',
+  menu: 'hidden',
   contact: 'hidden'
 }
 
@@ -17,11 +17,6 @@ function clearContent () {
 }
 
 function generateContent () {
-  console.log(subSections)
-  let homeContent = ''
-  if (!homeContent || homeContent.textContent === '') {
-    homeContent = document.createElement('div');
-  }
   if (subSections.home === 'active') {
     return 'home-content';
   }
@@ -32,9 +27,8 @@ function generateContent () {
     return 'contact-content';
   }
   else {
+    return 'home-content';
   }
-
-  return homeContent;
 }
 
 function getObjectKey(obj, value) {
