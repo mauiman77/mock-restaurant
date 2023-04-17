@@ -29,7 +29,7 @@ html, body, .content {
     display: grid;
     grid-template-rows: 2fr 1fr;
     grid-template-columns: 1fr;
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid black;
 }
 
 .header .title {
@@ -57,7 +57,7 @@ html, body, .content {
     justify-content: center;
     align-items: center;
     font-family: var(--content-font);
-    border: 1px solid black;
+    border: 2px solid black;
     border-bottom: 0cap;
     font-size: 1.2rem;
     transition: 0.2s;
@@ -109,9 +109,12 @@ html, body, .content {
 }
 
 .home-content {
-    height: 45rem;
-    width: 30rem;
+    height: 35rem;
+    width: 50rem;
     background-color: aqua;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 7rem 5fr;
 }
 
 .menu-content {
@@ -124,4 +127,35 @@ html, body, .content {
     height: 50%;
     width: 50%;
     background-color: yellow;
+}
+
+.titleContainer  h1 {
+    margin: 0ch;
+    font-size: 4rem;
+    align-self: center;
+}
+
+.titleContainer {
+    background-color: aquamarine;
+    grid-row: 1/2;
+}
+
+.titleContainerBottom {
+    background-color: teal;
+    grid-row: 2/4;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 5rem;
+}
+
+.visitUs {
+    display: flex;
+    justify-content: end;
+    align-items: end;
+    padding: 1.2rem;
+    font-size: 1.5rem;
+}
+
+ul {
+    margin: 0;
 }

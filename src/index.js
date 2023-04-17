@@ -16,10 +16,13 @@ function changeContent () {
   const homeContent = document.createElement('div');
   homeContent.className = contentIdentifier();
   toClear.appendChild(homeContent)
+  title(homeContent);
 }
 
-function generateContent () {
+function generateContent (contentToAdd) {
+  if (contentToAdd === 'home') {
 
+  }
 }
 
 function contentIdentifier () {
