@@ -111,7 +111,9 @@ html, body, .content {
 .home-content {
     height: 35rem;
     width: 50rem;
-    background-color: aqua;
+    background-color: var(--main-section-color);
+    border-radius: 1.2rem;
+    border: 2px solid black;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 7rem 5fr;
@@ -136,26 +138,53 @@ html, body, .content {
 }
 
 .titleContainer {
-    background-color: aquamarine;
     grid-row: 1/2;
 }
 
 .titleContainerBottom {
-    background-color: teal;
     grid-row: 2/4;
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 2fr 1.5fr;
     grid-template-rows: 1fr 5rem;
+}
+
+.bulletPointsSection {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+
+.bulletPointsSection ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
 }
 
 .visitUs {
     display: flex;
     justify-content: end;
     align-items: end;
-    padding: 1.2rem;
+    padding: 1rem;
     font-size: 1.5rem;
+    grid-column: 2/3;
+    grid-row: 2/3;
 }
 
 ul {
     margin: 0;
+}
+
+.imageContainer {
+    grid-row: 1/2;
+    grid-column: 2/3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 0.6rem;
+    border: 2px solid black;
 }

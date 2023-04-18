@@ -10,12 +10,17 @@ const subSections = {
   contact: 'hidden'
 }
 
+function clearContent () {
+  const toClear = document.querySelector('.main');
+  toClear.innerHTML = '';
+  return toClear;
+}
+
 function changeContent () {
-  const toClear = document.querySelector('.main')
-  toClear.innerHTML = ''
+  const mainAppend = clearContent()
   const homeContent = document.createElement('div');
   homeContent.className = contentIdentifier();
-  toClear.appendChild(homeContent)
+  mainAppend.appendChild(homeContent)
   title(homeContent);
 }
 

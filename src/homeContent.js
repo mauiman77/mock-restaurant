@@ -35,7 +35,15 @@ function titleBottom () {
   bulletPointText(bulletPointSection);
   visitUs.textContent = 'Visit us or shop online!'
 
+  const imageDiv = document.createElement('div');
+  imageDiv.classList.add('imageContainer');
+  const image = document.createElement('img');
+  image.classList.add('image');
+  image.src='../exterior.jpg';
+  imageDiv.appendChild(image);
+
   titleBottom.appendChild(bulletPointSection);
+  titleBottom.appendChild(imageDiv);
   titleBottom.appendChild(visitUs);
 
   return titleBottom
