@@ -1,8 +1,8 @@
 import './style.css';
 import { title } from './homeContent';
+import { menu } from './menuContent';
 
 const mainSection = document.getElementById('content');
-
 
 const subSections = {
   home: 'active',
@@ -18,10 +18,11 @@ function clearContent () {
 
 function changeContent () {
   const mainAppend = clearContent()
-  const homeContent = document.createElement('div');
-  homeContent.className = contentIdentifier();
-  mainAppend.appendChild(homeContent)
-  title(homeContent);
+  const menuContent = document.createElement('div');
+  menuContent.className = contentIdentifier();
+  mainAppend.appendChild(menuContent)
+  // title(homeContent);
+  menu(menuContent)
 }
 
 function generateContent (contentToAdd) {

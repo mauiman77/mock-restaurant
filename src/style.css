@@ -12,10 +12,16 @@ html, body, .content {
     margin: 0;
 }
 
+body {
+    background: url('pexels-lukas-1352296.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #content {
     height: 100%;
-    display: grid;
-    grid-template-rows: 10rem 50rem 2rem;
+    flex-direction: column;
+    overflow: auto;
 }
 
 .header {
@@ -87,12 +93,12 @@ html, body, .content {
 .main {
     background-color: var(--main-section-color);
     font-family: var(--title-font);
-    background: url('pexels-lukas-1352296.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
+    flex: 1;
+    background: none;
 }
 
 .footer {
@@ -117,12 +123,6 @@ html, body, .content {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 7rem 5fr;
-}
-
-.menu-content {
-    height: 50%;
-    width: 50%;
-    background-color: red;
 }
 
 .contact-content {
@@ -187,4 +187,27 @@ ul {
     width: 15rem;
     border-radius: 0.6rem;
     border: 2px solid black;
+}
+
+.menu-content {
+    height: auto;
+    width: 50%;
+    background-color: red;
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+}
+
+.menuTop {
+    background-color: azure;
+    height: 7rem;
+    width: 100%;
+    align-self: center;
+}
+
+.menuBottom {
+    background-color: chartreuse;
+    height: 20rem;
+    width: 100%;
+    align-self: center;
 }
